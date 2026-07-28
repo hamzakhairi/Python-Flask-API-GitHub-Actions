@@ -14,6 +14,6 @@ def test_home(client):
 
     assert response.status_code == 200
     assert response.get_json() == {
-        "message": "Welcome to Flask API"
+        "message": "Welcome to Flask APII"
     }
 
