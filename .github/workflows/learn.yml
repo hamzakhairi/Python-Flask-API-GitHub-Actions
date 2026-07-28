@@ -15,5 +15,10 @@ jobs :
     steps:
       - name : print hello
         run : echo hello world
+      - name : checkout repo
+        uses : actions/checckout@v4.2.2
+      - name : lest repo files
+        run : ls -la
+
 
 
