@@ -1,0 +1,36 @@
+on:
+  push:
+    branches:
+      - main
+    path:
+      - "app.py"
+      - "tests/**"
+      - .github/workflows/push_pr.yml
+  pull_request:
+    branches:
+      - main
+
+jobs :
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name : checkout code 
+        uses : actions/checkout@v4
+
+      - name : run tests
+        run : |
+          ls -la
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+            pip install Flask pytest
+
+      - name: Run tests
+        run: |
+          python -m pytest
+
