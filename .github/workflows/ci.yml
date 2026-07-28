@@ -20,7 +20,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+            pip install Flask pytest
+          
 
       - name: Run tests
         run: |
@@ -30,3 +31,4 @@ jobs:
         run: |
           make docker-build
 # for small project there is no need to this  python -m pip install --upgrade pip
+# pip install -r requirements.txt
