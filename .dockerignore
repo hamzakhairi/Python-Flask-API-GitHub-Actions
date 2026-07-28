@@ -1,0 +1,9 @@
+__pycache__
+test
+venv
+.github
+.pytest_cache
+.gitignore
+DEV_DOC.md
+README.md
+requirements.txt
